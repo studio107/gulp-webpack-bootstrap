@@ -1,0 +1,40 @@
+.button {
+  box-sizing: content-box;
+  background: {
+    color: $main-color;
+  }
+  outline: none;
+  color: #fff;
+  font-weight: 700;
+  @include antialias;
+  padding: 5px 10px;
+  border-radius: $border-radius;
+  text-decoration: none;
+  border: $border-size solid transparent;
+
+  &.button__white {
+    background: {
+      color: #fff;
+    }
+    color: #353535;
+    border: $border-size solid $main-color;
+  }
+
+  &.button__fluid {
+    width: calc(100% - #{$border-size * 2});
+    display: inline-block;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.button__small {
+    padding: 3px 6px;
+    font-size: rem-calc(14px);
+    border: $border-size solid $main-color;
+  }
+
+  & + .button {
+    margin-left: 5px;
+  }
+}

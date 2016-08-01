@@ -1,0 +1,47 @@
+.page-header {
+  position: relative;
+  background: transparent url(../images/main/texture.png) 0 0 repeat;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 40px;
+
+  h1 {
+    margin: 0 0 20px 0;
+
+    @media #{$small-only} {
+      font-size: 2.2rem;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 20px auto 0;
+  }
+
+  p {
+    @include antialias;
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    height: 7px;
+    width: 100%;
+    background: transparent url(../images/main/top-shadow.png) 50% 50% no-repeat;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: " ";
+    height: 7px;
+    width: 100%;
+    background: transparent url(../images/main/bottom-shadow.png) 50% 50% no-repeat;
+  }
+}

@@ -1,0 +1,79 @@
+.mmodal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba($text-color, 0.6);
+  z-index: 8888;
+  display: none;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+
+  &.no-background {
+    background: none;
+  }
+
+  &.clickable {
+    cursor: pointer;
+  }
+}
+
+.mmodal-container {
+  opacity: 0;
+  position: relative;
+  z-index: 8889;
+  cursor: default;
+  margin: 100px auto 40px;
+  transform: scale(.6);
+  transition: all .2s ease;
+
+  &.open {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .mmodal-close {
+    text-decoration: none;
+    font-size: 32px;
+    cursor: pointer;
+    font-family: "Icons";
+    content: "\f00d";
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    z-index: 8890;
+    line-height: 25px;
+    display: block;
+    color: $asbestos;
+  }
+
+  .mmodal-content {
+    @include antialias;
+    font-size: 1rem;
+    @include background-clip(padding-box);
+    box-shadow: 0 16px 32px rgba(#000, 0.2);
+    padding: 60px;
+    background-color: white;
+  }
+}
+
+@media #{$screen} and (max-width: #{lower-bound($medium-range)}) {
+  .mmodal-container {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 auto;
+
+    .mmodal-content {
+      border-radius: 0;
+      overflow-y: auto;
+    }
+  }
+}

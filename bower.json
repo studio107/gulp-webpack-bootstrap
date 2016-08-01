@@ -1,0 +1,7 @@
+{
+  "name": "studio107",
+  "dependencies": {},
+  "devDependencies": {
+    "mindy-sass": "*"
+  }
+}

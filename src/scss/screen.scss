@@ -1,0 +1,91 @@
+@import "mindy/normalize";
+@import "settings";
+@import "colors/default";
+@import "mindy/mindy";
+
+@import "parts/mixins";
+@import "vendor/fancybox";
+@import "vendor/mmodal";
+
+@import "block/page_header";
+
+@import "parts/base";
+@import "parts/button";
+@import "parts/input";
+@import "parts/mixins";
+
+a {
+  color: darken($main-color, 10%);
+  text-decoration: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+hr {
+  margin: $block-margin 0;
+}
+
+.block-margin {
+  margin-bottom: $block-margin;
+}
+
+.heading-text {
+  line-height: 26px;
+  font-size: rem-calc(18px);
+  @include antialias;
+  text-align: center;
+}
+
+h1, .main-title {
+  font-size: rem-calc(46px);
+  line-height: rem-calc(46px);
+  font-weight: 900;
+  @include antialias;
+  margin: 0 0 45px 0;
+  display: block;
+  color: $text-color;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: rem-calc(36px);
+  line-height: rem-calc(36px);
+  font-weight: 900;
+  @include antialias;
+  margin: 0 0 45px 0;
+  display: block;
+  color: $text-color;
+  text-decoration: none;
+}
+
+h4 {
+  @include antialias;
+  font-size: rem-calc(24px);
+  font-weight: 900;
+  line-height: rem-calc(24px);
+  margin: $block-margin / 2 0;
+}
+
+.main-title {
+  text-align: center;
+  margin: 45px 0;
+}
+
+form {
+  label {
+    .required {
+      color: $pomegranate;
+      font-weight: 900;
+    }
+  }
+}

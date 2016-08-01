@@ -1,0 +1,48 @@
+label {
+  font-size: .9rem;
+  color: $asbestos;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="text"] {
+  @include input_base;
+  height: 34px;
+
+  &[readonly] {
+    background: {
+      color: #fff !important;
+    }
+  }
+}
+
+select {
+  @include input_base;
+  height: 34px;
+}
+
+textarea {
+  @include input_base;
+  min-height: 100px;
+}
+
+textarea, select {
+  @include input_base;
+}
+
+.errors {
+  @include reset-list;
+
+  li {
+    margin: 0;
+    color: $pomegranate;
+    font-size: 1.05rem;
+    @include antialias;
+  }
+}
